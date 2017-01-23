@@ -12,7 +12,7 @@ $(function() {
 
     var newTask = new Task(userInput);
 
-    $(".form-check").append("<label class='form-check-label'><input class='form-check-input' type='checkbox' value=''>" + newTask.task + "</label>");
+    $("#to-do").append("<div class='form-check'><label class='form-check-label'><input class='form-check-input' type='checkbox' value=''>" + newTask.task + "</label></div>");
 
     $("input").val("");
   });
