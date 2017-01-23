@@ -20,10 +20,12 @@ $(function() {
 
     $("input").val("");
 
-    $(".form-check input").change(function() {
+    $(".form-check input").off().change(function() {
       if($(this).is(":checked")) {
         $(this).parent().parent().hide();
-        $("#completed ul").append((newTask.task).last);
+        $("#completed ul").append("<li>" + this.nextSibling.textContent
+         + "</li>");
+        //  debugger;
       }
     });
   });
