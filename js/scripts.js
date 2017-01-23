@@ -12,6 +12,8 @@ $(function() {
 
     var newTask = new Task(userInput);
 
-    $("#to-do ul").append("<li><span class='task'>" + newTask.task + "</span></li>");
+    $(".form-check").append("<label class='form-check-label'><input class='form-check-input' type='checkbox' value=''>" + newTask.task + "</label>");
+
+    $("input").val("");
   });
 });
