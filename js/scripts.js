@@ -4,7 +4,7 @@ function Task(input) {
 };
 
 var addCheckbox = function(task) {
-  return "<div class='form-check'><label class='form-check-label'><input class='form-check-input' type='checkbox' value=''>" + task + "</label></div>"
+  return "<div class='form-check'><label class='form-check-label' for='cbx'><input class='form-check-input' type='checkbox' value=''>" + task + "</label></div>"
 };
 
 //User Logic
@@ -23,6 +23,7 @@ $(function() {
     $(".form-check input").change(function() {
       if($(this).is(":checked")) {
         $(this).parent().parent().hide();
+        $("#completed ul").append((newTask.task).last);
       }
     });
   });
