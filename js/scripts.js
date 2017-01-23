@@ -16,10 +16,14 @@ $(function() {
 
     var newTask = new Task(userInput);
 
-
-
     $("#to-do").append(addCheckbox(newTask.task));
 
     $("input").val("");
+
+    $(".form-check input").change(function() {
+      if($(this).is(":checked")) {
+        $(this).parent().parent().hide();
+      }
+    });
   });
 });
